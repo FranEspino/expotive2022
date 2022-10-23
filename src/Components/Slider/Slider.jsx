@@ -104,7 +104,7 @@ function Slider() {
 
       <Typography
         variant="h3"
-        sx={{ fontSize: "35px", textAlign: 'center', fontWeight: "bold", color:'text.primary', my: 3 }}
+        sx={{ fontSize: {xs: "28px", md:"35px" }, textAlign: 'center', fontWeight: "bold", color:'text.primary', my: 3 }}
       >
         ¿Que es Expotive?
       </Typography>
@@ -116,21 +116,20 @@ function Slider() {
             display: "flex",
             alignItems: "center",
             height: 50,
-        
             marginTop: { xs: 8, md: 4 },
             marginBottom: { xs: 5, md: 4 },
-
             color: "primary.text",
             bgcolor: "background.default",
           }}
         >
           <Typography
             sx={{
-              fontSize: { xs: "18px", md: "20px" },
+              fontSize: { xs: "16px", md: "20px" },
               fontWeight: "semibold",
               marginBottom: "1em",
-              color:'primary.text'
-
+              color:'primary.text',
+              textAlign: {xs: 'center', md:'left'}
+                
             }}
           >
             {images[activeStep].history}
@@ -141,7 +140,7 @@ function Slider() {
           index={activeStep}
           onChangeIndex={handleStepChange}
           enableMouseEvents
-         interval={5000}
+         interval={6500}
         >
           {images.map((step, index) => (
             <div key={step.label} >

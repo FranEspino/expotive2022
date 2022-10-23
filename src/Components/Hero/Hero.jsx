@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <Box sx={{ backgroundColor: "background.default", 
     paddingTop:{xs: '3em', md:'6em'} ,
-     paddingBottom: '6em'}}>
+     paddingBottom: {xs: '3em', md:'6em'}}}>
     
         <Navbar />
         <Container>
@@ -58,8 +58,7 @@ const Hero = () => {
               variant="body2"
               sx={{ fontSize: "18px", my: 4, color: 'text.primary'}}
             >
-              Be the first to get the best real estate deals before they hit the
-              mass market! Hot foreclosure deals with one simple search!
+            El único evento de tecnología en el norte del pais donde puedes capacitarte, participar y conocer expertos del área de la informática.
             </Typography>
             <CustomButton
               backgroundColor="text.primary"
