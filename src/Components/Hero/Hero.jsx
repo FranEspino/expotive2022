@@ -2,8 +2,7 @@ import { Box, Container, styled, Typography } from "@mui/material";
 import React from "react";
 import Navbar from "../Navbar";
 import "@google/model-viewer";
-import model from "../../media/model2.glb";
-
+import Animation  from "./Animation";
 import CustomButton from "../CustomButton";
 import '../../index.css'
 const Hero = () => {
@@ -30,7 +29,9 @@ const Hero = () => {
   }));
 
   return (
-    <Box sx={{ backgroundColor: "background.default", paddingTop:'6em' }}>
+    <Box sx={{ backgroundColor: "background.default", 
+    paddingTop:{xs: '3em', md:'6em'} ,
+     paddingBottom: '6em'}}>
     
         <Navbar />
         <Container>
@@ -69,20 +70,8 @@ const Hero = () => {
             />
           </Box>
 
-          <Box sx={{flex:1}}>
-          <div className="model ">
-          <model-viewer
-            className="model"
-            poster="https://res.cloudinary.com/frapoteam/image/upload/v1620880668/avatarss_b1m8ml.png"
-            src={model}
-            alt="model name"
-            loading="lazy"
-       
-        
-            disable-zoom={true}
-            autoplay
-          ></model-viewer>
-        </div>
+          <Box sx={{flex:1, marginTop: {xs: "0em", md: "4em"}}}>
+            <Animation />
           </Box>
         </CustomBox>
         </Container>
